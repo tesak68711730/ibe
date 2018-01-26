@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import {Observable} from "rxjs/Observable";
-import {Http} from "@angular/http";
-import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
+import { Observable } from "rxjs/Observable";
+import { Http } from "@angular/http";
+import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
+import { data } from"../../../assets/autoCompleteData"
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/debounceTime';
+import 'rxjs/add/operator/distinctUntilChanged';
 
 @Component({
   selector: 'app-home',
@@ -66,20 +70,26 @@ export class HomeComponent implements OnInit {
     private flights: Array<any>;
 
 
-  constructor(private http: Http, private modalService:NgbModal) {
+    constructor(private http: Http, private modalService:NgbModal) {
       this.getAll().subscribe(data=>{
       this.flights = data._body;
     });
-  }
+    }
 
-  ngOnInit() {}
+    ngOnInit() {}
 
     getAll() : Observable<any> {
         console.log('func -->> getAll');
         return this.http.get(this.URL);
     }
 
-  searchOneWay(from, to, leaving, adult, child, typePers,  business_class) {
+    search = (text: Observable<string>) => text
+            .debounceTime(200)
+            .distinctUntilChanged()
+            .map(term => term.length < 2 ? []
+                : data.filter(v => v.toLowerCase().indexOf(term.toLowerCase()) > -1).slice(0, 10));
+
+    searchOneWay(from, to, leaving, adult, child, typePers,  business_class) {
 
     console.log("You make a one way search : \nFrom : " + from +
           ", \nTo : " + to +
