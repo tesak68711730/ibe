@@ -1,0 +1,140 @@
+<div class="mt-100">
+  <p>Search Result</p>
+</div>
+
+  <div class="border-2-blue" style="width: 714px; height: 229px">
+    <div class="border-2-red" style="width: 540px; height: 225px; float: left;">
+      <div class="border-2-blue" style="width: 538px; height: 221px">
+        <div class="border-2-red" style="width: 534px; height: 108px">
+          Air lane name
+          <div>
+            <div class="border-2-blue" style="float: left; width: 65px; height: 80px">AL_img</div>
+            <div class="border-2-blue" style="float: left; width: 171px; height: 80px">
+              <div class="border-2-red" style="height: 38px">iata-time</div>
+              <div class="border-2-red" style="height: 38px">location</div>
+            </div>
+            <div class="border-2-blue" style="float: left; width: 106px; height: 80px">
+              <div class="border-2-red" style="height: 36px">travel time</div>
+              <hr/>
+              <div class="border-2-red" style="height: 36px">1 stop</div>
+            </div>
+            <div class="border-2-blue" style="float: left; width: 188px; height: 80px">
+              <div class="border-2-red" style="height: 38px">iata-time</div>
+              <div class="border-2-red" style="height: 38px">location</div>
+            </div>
+          </div>
+        </div>
+        <div class="border-2-red" style="width: 534px; height: 109px">
+          Air lane name
+          <div>
+            <div class="border-2-blue" style="float: left; width: 65px; height: 81px">AL_img</div>
+            <div class="border-2-blue" style="float: left; width: 171px; height: 81px">
+              <div class="border-2-red" style="height: 39px">iata-time</div>
+              <div class="border-2-red" style="height: 39px">location</div>
+            </div>
+            <div class="border-2-blue" style="float: left; width: 106px; height: 81px">
+              <div class="border-2-red" style="height: 37px">travel time</div>
+              <hr/>
+              <div class="border-2-red" style="height: 37px">1 stop</div>
+            </div>
+            <div class="border-2-blue" style="float: left; width: 188px; height: 81px">
+              <div class="border-2-red" style="height: 39px">iata-time</div>
+              <div class="border-2-red" style="height: 39px">location</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border-2-red" style="width: 170px; height: 225px; float: left">
+      <div class="border-2-blue" style="width: 166px; height: 110px;">
+        <button (click)="openRequestedPopup(usuario, usuariomodal)">See Details</button>
+      </div>
+      <div class="border-2-blue" style="width: 166px; height: 111px;">
+        price
+      </div>
+    </div>
+  </div>
+
+<div class="row" id="usuarias">
+  <div class="col-4 usuario" *ngFor="let usuario of usuarios">{{usuario.nome}}
+    <button (click)="openRequestedPopup(usuario, usuariomodal)">Details<i>   {{usuario.nome}}</i></button>
+  </div>
+</div>
+
+<ng-template #usuariomodal>
+  <div class="modal-header">
+    <h4 class="modal-title">{{usuario.nome}}</h4>
+  </div>
+  <div class="modal-body">
+    <div>id : {{usuario.id}}</div>
+    <div>nome : {{usuario.nome}}</div>
+  </div>
+  <div class="modal-footer">
+
+  </div>
+</ng-template>
+
+<div style="margin: 20px 20px;" >
+  <p>What is Lorem Ipsum?</p>
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    It has survived not only five centuries, but also the leap into electronic typesetting,
+    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+    containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
+    including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    It has survived not only five centuries, but also the leap into electronic typesetting,
+    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+    containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
+    including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    It has survived not only five centuries, but also the leap into electronic typesetting,
+    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+    containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
+    including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    It has survived not only five centuries, but also the leap into electronic typesetting,
+    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+    containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
+    including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    It has survived not only five centuries, but also the leap into electronic typesetting,
+    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+    containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
+    including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    It has survived not only five centuries, but also the leap into electronic typesetting,
+    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+    containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
+    including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    It has survived not only five centuries, but also the leap into electronic typesetting,
+    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+    containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
+    including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    It has survived not only five centuries, but also the leap into electronic typesetting,
+    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+    containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
+    including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    It has survived not only five centuries, but also the leap into electronic typesetting,
+    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+    containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
+    including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    It has survived not only five centuries, but also the leap into electronic typesetting,
+    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+    containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
+    including versions of Lorem Ipsum.</p>
+</div>
