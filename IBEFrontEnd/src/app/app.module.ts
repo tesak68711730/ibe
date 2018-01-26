@@ -12,6 +12,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { ROUTES } from "./app.routes";
 import {AboutModule} from "./pages/about/about.module";
 import {FooterModule} from "./components/footer/footer.module";
+import {SearchCodeModule} from "./pages/searchCode/searchCode.module";
+import {SearchResultModule} from "./pages/searchResults/searchResult.module";
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import {FooterModule} from "./components/footer/footer.module";
     LoginModule,
     HomeModule,
     AboutModule,
-      FooterModule
+      FooterModule,
+      SearchCodeModule,
+      SearchResultModule
   ],
   providers: [ENV_PROVIDERS],
   bootstrap: [AppComponent]

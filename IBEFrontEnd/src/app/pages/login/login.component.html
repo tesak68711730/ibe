@@ -1,17 +1,19 @@
-<div class="container" style="width: 30%; align-content: center">
+<div class="container" style="width: 30%; align-content: center;  margin-top: 100px;">
   <h1 style="alignment: center">Please sign in</h1>
 
-  <form (submit)="login(email.value, password.value); $event.preventDefault()">
+  <form (submit)="login(username.value, password.value); $event.preventDefault()">
 
     <div class="form-group">
-      <label class="col-form-label" for="email">Email</label>
-      <input type="text" #email class="form-control" id="email" placeholder="Email">
+      <label class="col-form-label" for="username">Email</label>
+      <input type="text" #username class="form-control" id="username" placeholder="Email">
     </div>
 
     <div class="form-group">
       <label class="col-form-label" for="password">Password</label>
       <input type="password" #password class="form-control" id="password" placeholder="Password">
     </div>
+
+    <ngb-alert *ngIf="successMessage" type="danger" (close)="successMessage = null">{{ successMessage }}</ngb-alert>
 
     <button type="submit" class="btn btn-lg btn-primary">Sign in</button>
 

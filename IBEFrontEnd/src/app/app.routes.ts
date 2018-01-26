@@ -4,6 +4,8 @@ import { HomeComponent } from "./pages/home/home.component";
 import {PublicPageGuard} from "./core/service/public-page.guard";
 import {PrivatePageGuard} from "./core/service/private-page.guard";
 import {AboutComponent} from "./pages/about/about.component";
+import {SearchCodeComponent} from "./pages/searchCode/searchCode.component";
+import {SearchResultComponent} from "./pages/searchResults/searchResult.component";
 
 export const ROUTES: Routes = [
   { path: '',
@@ -18,6 +20,16 @@ export const ROUTES: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+    canActivate: [PrivatePageGuard]
+  },
+  {
+    path: 'searchCode',
+    component: SearchCodeComponent,
+    canActivate: [PrivatePageGuard]
+  },
+  {
+    path: 'searchResult',
+    component: SearchResultComponent,
     canActivate: [PrivatePageGuard]
   },
   {

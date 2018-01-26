@@ -1,28 +1,30 @@
-import { CommonModule } from "@angular/common";
-import { RouterModule } from "@angular/router";
-import { HeaderComponent } from "./header.component";
-import { NgModule } from "@angular/core";
-import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule } from "@angular/material";
-import { ButtonsModule } from "@progress/kendo-angular-buttons";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { BrowserModule } from "@angular/platform-browser";
-import { LayoutModule } from "@progress/kendo-angular-layout";
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import {MatButtonModule, MatCheckboxModule, MatMenuModule} from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {RouterModule} from "@angular/router";
+import {HeaderComponent} from "./header.component";
 
 @NgModule({
   imports: [
-      CommonModule,
+      // CommonModule,
       RouterModule,
       BrowserModule,
       BrowserAnimationsModule,
-      ButtonsModule,
-      MatToolbarModule,
-      MatButtonModule,
-      LayoutModule,
+      // ButtonsModule,
+      // MatToolbarModule,
+      // MatButtonModule,
+      // LayoutModule,
       MatMenuModule,
-      MatCardModule,
-      FormsModule,
-      ReactiveFormsModule
+      // MatCardModule,
+      // FormsModule,
+      // ReactiveFormsModule
+      BrowserModule,
+      MatMenuModule,
+      MatButtonModule,
+      BrowserAnimationsModule,
+      MatCheckboxModule
   ],
   declarations: [
     HeaderComponent,

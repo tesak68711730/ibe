@@ -29,4 +29,8 @@ export class HeaderComponent implements OnInit {
         this.authService.logout();
         this.router.navigate(['/login']);
     }
+
+    listView() {
+        alert("HeLLo");
+    }
 }
